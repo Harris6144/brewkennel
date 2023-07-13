@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "brewkennel-bc2a5": {
+      "hosting": {
+        "brewkennel": [
+          "brewkennel-bc2a5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "brewkennel-bc2a5"
+  }
+}
