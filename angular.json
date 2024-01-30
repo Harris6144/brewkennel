@@ -88,6 +88,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "brewkennel:build:production",
+              "serveTarget": "brewkennel:serve:production"
+            },
+            "development": {
+              "buildTarget": "brewkennel:build:development",
+              "serveTarget": "brewkennel:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

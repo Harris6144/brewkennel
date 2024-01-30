@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "brewkennel-26756": {
+      "hosting": {
+        "brewkennel": [
+          "brewkennel-26756"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "brewkennel-26756"
+  }
+}
