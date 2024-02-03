@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 import { Beer } from './beer.model';
 
@@ -18,5 +18,9 @@ export class BeerService {
 
   getBeers(page: number): Observable<Beer[]> {
     return this.http.get<Beer[]>(rootEndpoint + 'beers?page=' + page);
+  }
+
+  getBeer(id: number) : Observable<Beer> {
+    return this.http.get<Beer[]>(rootEndpoint + 'beers/' + id).pipe(map(beers => beers[0]));
   }
 }
