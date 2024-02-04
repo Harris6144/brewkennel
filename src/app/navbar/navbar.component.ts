@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'nav[app-navbar]',
@@ -11,5 +11,13 @@ import { RouterLink } from '@angular/router';
   }
 })
 export class NavbarComponent {
+  router: Router;
 
+  constructor() {
+    this.router = inject(Router);
+  }
+
+  onRandomBeer() {
+    this.router.navigate(['/beer/' + (Math.floor(Math.random() * 325) + 1)]);
+  }
 }
