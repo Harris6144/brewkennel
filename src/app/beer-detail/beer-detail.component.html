@@ -14,7 +14,7 @@
         <h6 class="text-lg font-semibold text-blue-500">Description</h6>
         <p class="text-gray-800">{{beer.description}}</p>
       </div>
-      <div class="grow shrink p-4 bg-white rounded border border-gray-300">
+      <div class="grow shrink lg:shrink-0 p-4 bg-white rounded border border-gray-300">
         <h6 class="text-lg font-semibold text-blue-500">Food pairing</h6>
         <ul class="list-inside list-disc text-gray-800">
           @for (pairing of beer.food_pairing; track $index) {
